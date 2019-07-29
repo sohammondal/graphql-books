@@ -1,0 +1,46 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Booklist - A GraphQL App",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "cd client/ && npm install && cd ../",
+    "client": "npm start --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js --config nodemon.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "author": "Soham Mondal",
+  "license": "ISC",
+  "keywords": [
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "React.js",
+    "GraphQL"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sohammondal/graphql-books.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sohammondal/graphql-books/issues"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.4.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.6.2"
+  },
+  "engines": {
+    "npm": ">=5.5.0",
+    "node": ">=9.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
