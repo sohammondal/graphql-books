@@ -1,6 +1,7 @@
 const express = require("express");
 const graphqlHTTP = require("express-graphql");
 const env = process.env.NODE_ENV;
+const PORT = process.env.PORT || 4000;
 const schema =
   env === "dev" ? require("./schema/dummySchema") : require("./schema/schema");
 const mongoose = require("mongoose");
@@ -19,7 +20,7 @@ try {
   mongoose
     .connect(
       `mongodb://${process.env.DB_USER}:${
-        process.env.DB_PASS
+      process.env.DB_PASS
       }@ds243897.mlab.com:43897/${process.env.DB_NAME}`,
       {
         useNewUrlParser: true,
@@ -42,6 +43,6 @@ app.use(
   })
 );
 
-app.listen(4000, () =>
-  console.log("*************\tSERVER LISTENING ON PORT 4000\t*************")
+app.listen(PORT, () =>
+  console.log(`*************\tSERVER LISTENING ON PORT ${PORT}\t*************`)
 );
