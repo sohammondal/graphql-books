@@ -35,6 +35,11 @@ try {
   console.error(err.message);
 }
 
+app.get('/', (req, res) => {
+  var url = req.protocol + '://' + req.get('host') + req.originalUrl + 'graphql';
+  res.send(`The client side of the application is not ready yet. Please visit <a href="${url}">GraphiQL</a>`)
+});
+
 app.use(
   "/graphql",
   graphqlHTTP({
