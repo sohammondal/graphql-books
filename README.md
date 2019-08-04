@@ -21,7 +21,7 @@
 
 ### 🏠 [Homepage](http://gql-books.sohammondal.com/graphql)
 
-***<p>I will be developing the client side of the application soon.</p>***
+***<p>I will be developing the client side of the application soon. For the time being, you can explore the GraphiQL interface.</p>***
 
 ## Prerequisites
 
