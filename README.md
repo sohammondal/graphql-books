@@ -30,13 +30,21 @@
 
 ## Install
 
-```sh
-npm install && npm client-install
+```bash
+# Install Server side dependencies
+npm install
+
+# Install Client side dependencies
+npm run client-install
 ```
 
 ## Usage
 
-```sh
+```bash
+# install concurrently globally
+npm i -g concurrently
+
+# Run Client & Server  
 npm run dev
 ```
 
